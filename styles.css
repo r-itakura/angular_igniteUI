@@ -1,0 +1,509 @@
+﻿/* reset stuff */
+html {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a:visited,
+a {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    /*background-color: #191919;*/
+    /*color: #fff;*/
+}
+
+.ui-widget-content.ui-chart-container {
+    border: none;
+    text-align: center;
+}
+
+.container {
+    width: auto;
+    overflow: auto;
+    padding: 0px;
+}
+
+/* header */
+
+header {
+    height: 44px;
+    line-height: 44px;
+}
+
+    header img {
+        margin-top: 15px;
+        margin-left: 15px;
+    }
+
+    header .ui-sprite {
+        position: relative;
+        top: 8px;
+        right: 15px;
+        float: right;
+        margin-left: 15px;
+    }
+
+
+
+
+/* info screen */
+
+#info-screen {
+    position: absolute;
+    width: 360px;
+    padding: 15px;
+    font-size: 12px;
+    /*Z.K. 22 January, 2016 Task #212553 - Remove initial info dialog and move the content into info window*/
+    background-color: rgba(0, 0, 0, 0.99); 
+    color: #BDBDBD;
+    border: 1px solid #272727;
+    right: 70px;
+    z-index: 10000;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 474px) {
+    #info-screen {
+        width: auto;
+        margin-left: 15px;
+    }
+}
+
+/* values */
+
+.values-container {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0px 0px 0px;
+}
+
+.stock-value {
+    margin-left: 15px;
+    display: inline-block;
+    float: left;
+}
+
+.stock-time {
+    color: #666666;
+    font-size: 14px;
+    display: inline-block;
+    position: relative;
+    top: -40px;
+    left: 15px;
+}
+
+.inactive-value {
+    color: #666;
+    font-size: 1.625em;
+}
+
+.market-closed {
+    color: #666;
+    font-size: 0.8em;
+    margin-bottom: -5px;
+}
+
+.company {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 2em;
+    margin-left: 15px;
+    margin-bottom: -10px;
+    color:#000000;
+}
+
+.current-value {
+    font-size: 3.125em;
+    font-weight: bold;
+    font-family: 'Open Sans' !important;
+    color: #000000;
+}
+
+.value-change-container {
+    display: inline-block;
+}
+
+.increase-value,
+.decrease-value {
+    font-size: 1.875em;
+}
+
+.increase-value {
+    color: #4EA61E;
+}
+
+.decrease-value {
+    color: red;
+}
+
+#js-invalid-ticker {
+    margin-top: 14px;
+    margin-bottom: 0;
+}
+
+.details {
+    height: 100px;
+    float: right;
+    text-align: right;
+    margin-right: 20px;
+    font-size: 0.875em;
+}
+
+    .details ul {
+        text-align: left;
+        padding-left: 20px;
+        list-style: none;
+        font-size: 0.875em;
+        display: inline-block;
+    }
+
+    .details li {
+        margin-bottom: 4px;
+     
+    }
+
+.details-title {
+    color: #666666;
+}
+
+.details-value{
+   color : #000000;
+   font-weight:bold;
+}
+
+/*sprite*/
+
+.ui-sprite {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    background-image: url('../images/ui-sprite.png');
+}
+
+    .ui-sprite:hover {
+        cursor: pointer;
+    }
+
+.icon-change-company {
+    background-position: 0 -192px;
+}
+
+.icon-chart-switch {
+    background-position: 0 0;
+}
+
+.icon-info {
+    background-position: 0 -64px;
+}
+
+.icon-about {
+    background-position: 0 -128px;
+}
+
+.icon-gear {
+    background-position: -32px -128px;
+}
+
+.icon-down {
+    background-position: -32px 0;
+    position: relative;
+    top: 10px;
+}
+
+
+.icon-change-company:hover {
+    background-position: -32px -192px;
+}
+
+.icon-chart-switch:hover {
+    background-position: 0 -32px;
+}
+
+.icon-info:hover {
+    background-position: 0 -96px;
+}
+
+.icon-about:hover {
+    background-position: 0 -160px;
+}
+
+.indicator-period:hover .icon-gear {
+    background-position: -32px -160px;
+}
+
+.icon-inscrease-value {
+    background-position: 0 -257px;
+}
+
+.icon-decrease-value {
+    background-position: 0 -224px;
+}
+
+.icon-decrease-value,
+.icon-inscrease-value {
+    position: relative;
+    top: 5px;
+    margin-right: -5px;
+}
+
+.indicator-period a {
+    font-size: 0.813em;
+    color: #FFF;
+    height: 32px;
+    padding: 10px 0px;
+}
+
+.indicator-period .icon-gear {
+    position: relative;
+    top: 11px;
+    margin-left: 5px;
+}
+
+.avt-value {
+    color: #666666;
+    margin-left: 5px;
+}
+
+
+/*
+ * jQuery UI Tabs @VERSION
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Tabs#theming
+ */
+
+.tab-value {
+    color: #fff;
+}
+
+.ui-tabs {
+    background-color: #232323;
+}
+
+    .ui-tabs .ui-tabs-nav {
+        padding: 0;
+        margin: 0;
+        height: 35px;
+        background-color: #191919;
+        border-bottom: 1px solid #303030;
+    }
+
+        .ui-tabs .ui-tabs-nav li {
+            list-style: none;
+            float: left;
+            position: relative;
+            top: 1px;
+            margin: 0 0.2em 1px 0;
+            border-bottom: 0 !important;
+            padding: 0;
+            white-space: nowrap;
+        }
+
+            .ui-tabs .ui-tabs-nav li a {
+                float: left;
+                padding: 7px 15px;
+                text-decoration: none;
+            }
+
+            .ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+                margin-bottom: 0;
+                padding-bottom: 1px;
+            }
+
+                .ui-tabs .ui-tabs-nav li.ui-tabs-selected a,
+                .ui-tabs .ui-tabs-nav li.ui-state-disabled a,
+                .ui-tabs .ui-tabs-nav li.ui-state-processing a {
+                    cursor: text;
+                }
+
+            .ui-tabs .ui-tabs-nav li a,
+            .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+                cursor: pointer;
+            }
+
+    /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+    .ui-tabs .ui-tabs-panel {
+        display: block;
+    }
+
+    .ui-tabs .ui-tabs-hide {
+        display: none !important;
+    }
+
+    .ui-tabs .ui-tabs-nav li.ui-state-default {
+        background-color: transparent;
+        background-image: none;
+        background-repeat: repeat-x;
+        background-position: 0 0;
+        border-color: transparent;
+    }
+
+        .ui-tabs .ui-tabs-nav li.ui-state-default a {
+            color: #b3e6f5;
+            text-shadow: 0 transparent;
+        }
+
+    .ui-tabs .ui-tabs-nav li.ui-state-hover {
+        background-color: transparent;
+        background-image: none;
+        background-repeat: repeat-x;
+    }
+
+        .ui-tabs .ui-tabs-nav li.ui-state-hover a {
+            color: white;
+            text-shadow: 0 transparent;
+        }
+
+    .ui-tabs .ui-tabs-nav li.ui-state-active {
+        background: #232323;
+    }
+
+        .ui-tabs .ui-tabs-nav li.ui-state-active a {
+            border-top: 4px solid #00aade;
+            color: #00aade;
+            outline: 0;
+        }
+
+
+
+
+
+
+
+
+/* IGCHART */
+
+
+
+
+
+/*
+ * jQuery UI Selectable @VERSION
+ *
+ * Copyright 2010, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Selectable#theming
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#chartContainer {
+    margin-top: -10px;
+}
+
+#stockDetails.hide-change-stock-ticker .change-stock-ticker,
+#info-screen.hide-change-stock-ticker .change-stock-ticker {
+    display: none !important;
+}
+
+@media only screen and (max-width : 1025px) {
+    .ui-dialog-wrap a, .dialog-qr {
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 1000px) {
+
+    .value-change-container {
+        display: block;
+        margin-top: -10px;
+    }
+
+    .icon-decrease-value,
+    .icon-inscrease-value {
+        margin-left: -10px;
+        font-size: 1.625em;
+    }
+
+    .details {
+        font-size: 0.813em;
+    }
+
+    .stock-time {
+        top: 0px;
+    }
+
+    #chartContainer {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width : 680px) {
+    .details {
+        float: left;
+        text-align: left;
+    }
+}
+
+.control-item {
+    display: inline-block;
+}
+
+@media (max-width: 864px) {
+    #about-dialog {
+        width: auto !important;
+        margin: 0 15px 0 15px;
+    }
+
+    .control-item {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 543px) {
+    .control-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 543px) {
+    .control-sprite-wrap {
+        height: auto;
+    }
+
+    .dialog-igniteui, .dialog-infragistics {
+        position: static;
+    }
+}
+
+@media (max-width: 473px) {
+    .control-item {
+        display: block;
+        width: auto;
+    }
+}
+

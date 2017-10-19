@@ -1,0 +1,54 @@
+<div id="stockDetails" class="values-container">
+    <div class="company">{{details?.Name}} ({{details?.Symbol}})
+    </div>
+    <div class="stock-value">
+        <span class="current-value">{{details?.LastTradeAmount}}</span>
+        <span class="icon-decrease-value ui-sprite"></span><span class="decrease-value">{{details?.Change}} ({{details?.PercentChange}})</span>
+        <div class="market-closed">{{details?.marketCurrentlyClosed}}</div>
+    </div>
+
+    <div class="details">
+        <ul class="details-title">
+            <li>Range</li>
+            <li>52 Weeks</li>
+            <li>Open</li>
+            <li>Volume</li>
+        </ul>
+
+        <ul class="details-value">
+            <li>{{details?.DailyRange}}</li>
+            <li>{{details?.Range52Week}}</li>
+            <li>{{details?.Open}}</li>
+            <li>{{details?.Volume}}</li>
+        </ul>
+
+        <ul class="details-title">
+            <li>EBITA</li>
+            <li>EPS</li>
+            <li>Mkt Cap</li>
+            <li>P/E</li>
+        </ul>
+
+        <ul class="details-value">
+            <li>{{details?.EBITDA}}</li>
+            <li>{{details?.EarningsPerShare}}</li>
+            <li>{{details?.MarketCapitalization}}</li>
+            <li>{{details?.PERatio}}</li>
+        </ul>
+
+        <ul class="details-title">
+            <li>Ask</li>
+            <li>Bid</li>
+            <li>Daily High</li>
+            <li>Daily Low</li>
+        </ul>
+
+        <ul class="details-value">
+            <li>{{details?.Ask}}</li>
+            <li>{{details?.Bid}}</li>
+            <li>{{details?.DailyHigh}}</li>
+            <li>{{details?.DailyLow}}</li>
+        </ul>
+    </div>
+</div>
+<span class="stock-time">{{details?.LastTradeDate | date:'short'}}</span>
